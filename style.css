@@ -102,7 +102,7 @@ p.subtitle {
 .content {
   position: absolute;
   top: 200vh;
-  animation: scroller 14s linear 9s;
+  animation: scroller 24s linear 9s;
 }
 
 @keyframes scroller {
@@ -128,7 +128,7 @@ p.subtitle {
   left: 50%;
   top: calc(50% - 50px);
   opacity: 0;
-  animation: fadein 2s ease-in 20s forwards, float 2s ease-in-out infinite;
+  animation: fadein 2s ease-in 26s forwards, float 2s ease-in-out infinite;
 }
 
 .ending #ending_text {
@@ -142,7 +142,7 @@ p.subtitle {
   left: 50%;
   top: calc(50% + 100px);
   opacity: 0;
-  animation: fadein 2s ease-in 22s forwards, float 2s ease-in-out infinite;
+  animation: fadein 2s ease-in 28s forwards, float 2s ease-in-out infinite;
 }
 
 @keyframes fadein {
