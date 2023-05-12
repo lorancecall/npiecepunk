@@ -1,6 +1,6 @@
 import "./style.css";
 import * as THREE from "three";
-import { gsap } from "gsap/dist/gsap";
+import {gsap} from "gsap/dist/gsap";
 
 window.onload = function () {
   // required three components (scene, camera, and renderer)
@@ -39,7 +39,7 @@ window.onload = function () {
   // randomly generated stars.
   function addStar() {
     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-    const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    const material = new THREE.MeshStandardMaterial({color: 0xffffff});
     const star = new THREE.Mesh(geometry, material);
 
     const [x, y, z] = Array(3)
@@ -54,8 +54,8 @@ window.onload = function () {
 
   var punks = [];
   function addPunk(i) {
-    const idx = String(i).padStart(4, "0");
-    const imgPath = `imgs/${idx}.PNG`;
+    const idx = String(i).padStart(2, "0");
+    const imgPath = `imgs/np-${idx}.PNG`;
     const punkTexture = new THREE.TextureLoader().load(imgPath);
     const punk = new THREE.Mesh(
       new THREE.BoxGeometry(2, 2, 0.1),
@@ -74,7 +74,7 @@ window.onload = function () {
     punks.push(punk);
   }
 
-  for (let i = 1; i < 15; i++) {
+  for (let i = 1; i < 26; i++) {
     addPunk(i);
   }
 
@@ -104,6 +104,6 @@ window.onload = function () {
   }
   setTimeout(() => {
     animate();
-    moveCameraTo({ x: 0, y: 0, z: 80 }, 12.5);
+    moveCameraTo({x: 0, y: 0, z: 80}, 12.5);
   }, 5000);
 };
